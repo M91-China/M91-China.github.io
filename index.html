@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="M91-China 个人主页，专注于工具开发、效率提升和实用解决方案。"
+    />
+    <title>M91-China | Tool Developer</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23667eea'/%3E%3Ctext x='50' y='58' font-size='48' text-anchor='middle' fill='white' font-family='Arial, sans-serif'%3EM%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="loading-screen" aria-live="polite">
+      <div class="loader-shell">
+        <div class="loader-ring"></div>
+        <div class="loader-core">M91</div>
+      </div>
+      <div class="loader-progress-wrap">
+        <div class="loader-progress" id="loader-progress"></div>
+      </div>
+      <p>Loading...</p>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#home" class="brand" aria-label="回到首页">
+          <span class="brand-mark">M</span>
+          <span class="brand-text">M91-China</span>
+        </a>
+
+        <nav class="main-nav" aria-label="主导航">
+          <a href="#home" class="nav-link">首页</a>
+          <a href="#about" class="nav-link">关于</a>
+          <a href="#services" class="nav-link">服务</a>
+          <a href="#skills" class="nav-link">技能</a>
+          <a href="#projects" class="nav-link">作品</a>
+          <a href="#timeline" class="nav-link">经历</a>
+          <a href="#contact" class="nav-link">联系</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" aria-label="切换主题">
+            <span class="theme-icon">☀️</span>
+          </button>
+          <button class="menu-toggle" aria-label="菜单" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu-panel" aria-label="移动端菜单">
+        <nav class="mobile-nav" aria-label="移动端导航">
+          <a href="#home" class="nav-link">首页</a>
+          <a href="#about" class="nav-link">关于</a>
+          <a href="#services" class="nav-link">服务</a>
+          <a href="#skills" class="nav-link">技能</a>
+          <a href="#projects" class="nav-link">作品</a>
+          <a href="#timeline" class="nav-link">经历</a>
+          <a href="#contact" class="nav-link">联系</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero section">
+        <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+        <div class="container hero-inner">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">热爱创造与解决问题</p>
+            <h1>
+              Hi, I'm
+              <span class="gradient-text">M91-China</span>
+            </h1>
+            <div class="typing-box" aria-live="polite">
+              <span id="typing-text"></span>
+              <span class="typing-cursor"></span>
+            </div>
+            <p class="intro">
+              热爱开发实用工具，用代码提升效率，专注于创造解决实际问题的工具。相信技术应该服务于人，让复杂的事情变简单。
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">查看作品</a>
+              <a href="#contact" class="btn btn-secondary">联系我</a>
+            </div>
+
+            <div class="social-links" aria-label="社交链接">
+              <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">GitHub</a>
+              <a href="mailto:M91NB@outlook.com" aria-label="邮箱">Email</a>
+              <a href="#contact" aria-label="位置">Location</a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="avatar-stage">
+              <div class="avatar-ring ring-one"></div>
+              <div class="avatar-ring ring-two"></div>
+              <div class="avatar-core">
+                <div class="avatar-face">
+                  <span>M</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#about" class="scroll-indicator" aria-label="向下滚动">
+          <span>Scroll</span>
+          <i></i>
+        </a>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">关于我</p>
+            <h2>让实用工具成为效率的倍增器</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-visual reveal">
+              <div class="portrait-card">
+                <div class="portrait-placeholder">
+                  <span>M91</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-content reveal">
+              <p>
+                我是 <strong>M91-China</strong>，一个热爱代码与工具创造的人。
+                从最初解决日常工作中的重复问题开始，我逐渐发展出更系统化的工具开发思维，
+                把复杂流程拆解成清晰、稳定、可复用的解决方案。
+              </p>
+              <p>
+                我相信技术最大的价值，不只是“能不能做”，而是“能不能让人更轻松地完成事情”。
+                目前专注于实用工具、自动化脚本、效率提升与前端体验优化，致力于把枯燥流程转化为高效工具。
+              </p>
+
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <span class="stat-number" data-target="4">0</span>
+                  <span class="stat-label">年开发经验</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number" data-target="20">0</span>
+                  <span class="stat-label">个工具项目</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number" data-target="15">0</span>
+                  <span class="stat-label">个公开作品</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number" data-target="99">0</span>
+                  <span class="stat-label">%专注投入</span>
+                </div>
+              </div>
+
+              <div class="tag-cloud" aria-label="个人标签">
+                <span>工具开发</span>
+                <span>效率提升</span>
+                <span>自动化</span>
+                <span>前端</span>
+                <span>代码爱好者</span>
+                <span>持续学习</span>
+                <span>实战驱动</span>
+                <span>探索创新</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section section-alt">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">能做什么</p>
+            <h2>我专注于构建高效、实用的解决方案</h2>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card reveal">
+              <div class="service-icon">⚙️</div>
+              <h3>工具开发</h3>
+              <p>设计并开发实用工具，帮助用户提升日常效率，解决真实问题。</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">🚀</div>
+              <h3>自动化脚本</h3>
+              <p>将重复性流程自动化，减少人工操作，提升执行效率和稳定性。</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">🎨</div>
+              <h3>前端体验</h3>
+              <p>打造清晰、顺畅、可用性强的界面，让复杂功能更容易使用。</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">🧠</div>
+              <h3>方案设计</h3>
+              <p>从需求拆解到落地实现，提供结构化方案与持续优化思路。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">技能栈</p>
+            <h2>持续学习中的技术能力</h2>
+          </div>
+
+          <div class="skills-layout">
+            <div class="skill-groups reveal">
+              <div class="skill-group">
+                <h3>编程语言</h3>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span>JavaScript</span>
+                    <span>90%</span>
+                  </div>
+                  <div class="skill-bar"><span class="skill-fill" style="--value: 90%"></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span>Python</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="skill-bar"><span class="skill-fill" style="--value: 85%"></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span>Shell</span>
+                    <span>80%</span>
+                  </div>
+                  <div class="skill-bar"><span class="skill-fill" style="--value: 80%"></span></div>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <h3>工具框架</h3>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span>HTML / CSS</span>
+                    <span>92%</span>
+                  </div>
+                  <div class="skill-bar"><span class="skill-fill" style="--value: 92%"></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span>Node.js</span>
+                    <span>88%</span>
+                  </div>
+                  <div class="skill-bar"><span class="skill-fill" style="--value: 88%"></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span>Git</span>
+                    <span>84%</span>
+                  </div>
+                  <div class="skill-bar"><span class="skill-fill" style="--value: 84%"></span></div>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <h3>其他</h3>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span>自动化</span>
+                    <span>86%</span>
+                  </div>
+                  <div class="skill-bar"><span class="skill-fill" style="--value: 86%"></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span>UI / UX</span>
+                    <span>82%</span>
+                  </div>
+                  <div class="skill-bar"><span class="skill-fill" style="--value: 82%"></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span>产品思维</span>
+                    <span>89%</span>
+                  </div>
+                  <div class="skill-bar"><span class="skill-fill" style="--value: 89%"></span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-cloud reveal">
+              <div class="tag-cloud skill-tags">
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Node.js</span>
+                <span>Git</span>
+                <span>自动化</span>
+                <span>前端工程</span>
+                <span>UI设计</span>
+                <span>效率工具</span>
+                <span>脚本开发</span>
+                <span>产品思维</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section section-alt">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">项目展示</p>
+            <h2>探索我做过的一些作品与实践</h2>
+          </div>
+
+          <div class="filter-bar reveal" aria-label="项目筛选">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="tool">工具</button>
+            <button class="filter-btn" data-filter="web">网页</button>
+            <button class="filter-btn" data-filter="other">其他</button>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card reveal" data-category="tool">
+              <div class="project-thumb thumb-one">
+                <div class="project-overlay">
+                  <span>工具</span>
+                  <h3>效率助手</h3>
+                  <a class="project-link" href="#contact">查看详情</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>效率助手</h3>
+                <p>提升日常办公流程效率，减少重复性操作与低价值劳动。</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="web">
+              <div class="project-thumb thumb-two">
+                <div class="project-overlay">
+                  <span>网页</span>
+                  <h3>个人站点</h3>
+                  <a class="project-link" href="#contact">查看详情</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>个人站点</h3>
+                <p>适配多端展示的现代化个人主页，强调简洁与信息表达。</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="tool">
+              <div class="project-thumb thumb-three">
+                <div class="project-overlay">
+                  <span>工具</span>
+                  <h3>文件处理器</h3>
+                  <a class="project-link" href="#contact">查看详情</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>文件处理器</h3>
+                <p>批量整理、转换与清理数据文件，适用于作业与文档管理场景。</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="other">
+              <div class="project-thumb thumb-four">
+                <div class="project-overlay">
+                  <span>其他</span>
+                  <h3>自动化脚本</h3>
+                  <a class="project-link" href="#contact">查看详情</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>自动化脚本</h3>
+                <p>处理大量重复任务，帮助团队减少手动执行与繁琐协作成本。</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="web">
+              <div class="project-thumb thumb-five">
+                <div class="project-overlay">
+                  <span>网页</span>
+                  <h3>产品页</h3>
+                  <a class="project-link" href="#contact">查看详情</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>产品页</h3>
+                <p>整合品牌信息与交互展示，提升页面信息传达效果和用户体验。</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="other">
+              <div class="project-thumb thumb-six">
+                <div class="project-overlay">
+                  <span>其他</span>
+                  <h3>创意实验</h3>
+                  <a class="project-link" href="#contact">查看详情</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>创意实验</h3>
+                <p>尝试交互、动画和新型方案，探索界面与功能的更好结合方式。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="timeline" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">成长经历</p>
+            <h2>一路走来，持续迭代与成长</h2>
+          </div>
+
+          <div class="timeline reveal">
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <span class="timeline-date">2022</span>
+                <h3>开始系统学习开发</h3>
+                <p>从前端和脚本开发入手，建立基础技能，逐步提升对工具化思维的理解。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <span class="timeline-date">2023</span>
+                <h3>独立开发实用工具</h3>
+                <p>围绕日常流程进行工具化改造，形成一套更高效、更稳定的实践方法。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <span class="timeline-date">2024</span>
+                <h3>持续输出作品与优化</h3>
+                <p>探索更广泛的开发方向，提升产品思维、交互设计与工程落地能力。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <span class="timeline-date">2025</span>
+                <h3>走向更全面的创作阶段</h3>
+                <p>将工具开发与用户体验结合，围绕“解决真实问题”持续输出高质量成果。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="achievements" class="section section-alt">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">成就 / 荣誉</p>
+            <h2>持续积累与验证，追求更稳定的成果</h2>
+          </div>
+
+          <div class="achievement-grid">
+            <article class="achievement-card reveal">
+              <div class="achievement-icon">🏆</div>
+              <h3>多项工具实践</h3>
+              <p>以实战经验形成稳定的开发与迭代方法。</p>
+            </article>
+            <article class="achievement-card reveal">
+              <div class="achievement-icon">📈</div>
+              <h3>效率优化案例</h3>
+              <p>推动流程自动化，提高协作效率和执行质量。</p>
+            </article>
+            <article class="achievement-card reveal">
+              <div class="achievement-icon">💡</div>
+              <h3>创意解决方案</h3>
+              <p>从问题出发，将复杂需求拆解成可落地方案。</p>
+            </article>
+            <article class="achievement-card reveal">
+              <div class="achievement-icon">🤝</div>
+              <h3>持续学习者</h3>
+              <p>保持技术探索与实践输出，持续拓展能力边界。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container contact-grid">
+          <div class="contact-copy reveal">
+            <div class="section-heading align-left">
+              <p class="eyebrow">留言板 / 联系</p>
+              <h2>欢迎交流合作与创意想法</h2>
+            </div>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <span class="contact-label">邮件</span>
+                <a href="mailto:M91NB@outlook.com">M91NB@outlook.com</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">位置</span>
+                <span>中国 · 广州</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com" target="_blank" rel="noreferrer">github.com/M91-China</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap reveal">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="input-group">
+                <label for="name">姓名</label>
+                <input id="name" name="name" type="text" placeholder="请输入你的姓名" required />
+              </div>
+              <div class="input-group">
+                <label for="email">邮箱</label>
+                <input id="email" name="email" type="email" placeholder="请输入你的邮箱" required />
+              </div>
+              <div class="input-group">
+                <label for="message">消息</label>
+                <textarea id="message" name="message" rows="5" placeholder="告诉我你的想法或需求" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary submit-btn">发送消息</button>
+              <p class="form-status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <h3>M91-China</h3>
+          <p>用代码让复杂事情变简单。</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>快速导航</h4>
+          <a href="#about">关于</a>
+          <a href="#services">服务</a>
+          <a href="#projects">作品</a>
+          <a href="#contact">联系</a>
+        </div>
+
+        <div class="footer-social">
+          <h4>社交链接</h4>
+          <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="mailto:M91NB@outlook.com">Email</a>
+        </div>
+
+        <div class="footer-meta">
+          <h4>建站时间</h4>
+          <span id="siteYear">2026</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>© <span id="copyrightYear"></span> M91-China. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="回到顶部">↑</button>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+  </body>
+</html>
